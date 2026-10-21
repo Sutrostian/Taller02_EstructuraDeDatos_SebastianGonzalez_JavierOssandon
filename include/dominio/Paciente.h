@@ -7,12 +7,34 @@ class Paciente : public Persona
 {
 private:
     string servicio;
+    double temperatura;
+    int presionArterial;
+    int dolor;
+    string tipoDolor;
+    int trauma;
+    int sintomasNeurologicos;
+    int requiereCirugia;
+    int diasHospitalizacion;
 
 public:
-    // constructor
-    Paciente(int id, string nombre, int edad, string servicio);
-    //"getter" para obtener el servicio del paciente
+    
+    Paciente(int id, string nombre, int edad, string servicio); // constructor del taller 1 (lo dejo para que main siga compilando)
+    
+    Paciente(int id, string nombre, int edad, double temperatura, // constructor nuevo
+             int presionArterial, int dolor, string tipoDolor, int trauma,
+             int sintomasNeurologicos, int requiereCirugia,
+             int diasHospitalizacion);
+
     string getServicio() { return servicio; }
+    void setServicio(string s) { servicio = s; }
+    double getTemperatura() { return temperatura; }
+    int getPresionArterial() { return presionArterial; }
+    int getDolor() { return dolor; }
+    string getTipoDolor() { return tipoDolor; }
+    int getTrauma() { return trauma; }
+    int getSintomasNeurologicos() { return sintomasNeurologicos; }
+    int getRequiereCirugia() { return requiereCirugia; }
+    int getDiasHospitalizacion() { return diasHospitalizacion; }
 
     ~Paciente();
 };
