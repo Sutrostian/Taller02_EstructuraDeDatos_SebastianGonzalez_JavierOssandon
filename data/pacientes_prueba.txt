@@ -1,0 +1,502 @@
+001; Javier Ossandón; 25; Cardiologia
+002; Sebastian Gonzalez; 67; Urgencias
+003; Alvaro Tapía; 43; Cirugia
+004; Damian Valdivia; 12; Pediatria
+005; Harold Ramos; 31; Traumatologia
+001; Mateo Godoy; 30; Urgencias
+006; Martin Droguett; 22; Neurologia
+007; Andres Salitre; 40; Cardiologia
+008; Sato Callejas; 40; Psiquiatria
+009; Pukki Torres; 35; Medicina General
+010; Mario Gomez; 55
+011 Sofia Morales 22 Neurologia
+012; Lucia Fernandez; 29; Hospitalizacion
+013; Jorge Tapia; 50; Oftalmologia
+014; Elena Munoz; 19; Urgencias
+015; Patricio Alarcon; 45; Cardiologia
+016; Valentina Silva; 27; Pediatria
+017; Gonzalo Rojas; 33; Traumatologia
+018; Daniela Soto; 24; Cirugia
+019; Matias Barraza; 60; Neurologia
+020; Camila Pizarro; 21; Medicina General
+021; Esteban Castro; 38; Hospitalizacion
+022; Francisca Vega; 42; Urgencias
+023; Nicolas Herrera; 51; Cardiologia
+024; Antonia Cortes; 15; Pediatria
+025; Benjamin Araya; 28; Traumatologia
+026; Isidora Caceres; 34; Cirugia
+027; Vicente Espinoza; 49; Neurologia
+028; Martina Fuentes; 23; Medicina General
+029; Joaquin Gallardo; 36; Hospitalizacion
+030; Agustina Godoy; 44; Urgencias
+031; Lucas Henriquez; 52; Cardiologia
+032; Florencia Ibarra; 16; Pediatria
+033; Mateo Jeldres; 29; Traumatologia
+034; Emilia Kramer; 37; Cirugia
+035; Maximo Leiva; 48; Neurologia
+036; Rafaela Mansilla; 22; Medicina General
+037; Simon Navarrete; 39; Hospitalizacion
+038; Trinidad Olivares; 41; Urgencias
+039; Alonso Palma; 53; Cardiologia
+040; Catalina Quezada; 18; Pediatria
+041; Diego Retamal; 30; Traumatologia
+042; Maite Saavedra; 35; Cirugia
+043; Liam Toro; 47; Neurologia
+044; Julieta Urrea; 25; Medicina General
+045; Gabriel Valenzuela; 40; Hospitalizacion
+046; Sofia Zamorano; 43; Urgencias
+047; Samuel Aliste; 50; Cardiologia
+048; Amalia Baeza; 14; Pediatria
+049; Tomas Campos; 32; Traumatologia
+050; Antonella Diaz; 38; Cirugia
+051; Martin Escobar; 46; Neurologia
+052; Ignacia Flores; 21; Medicina General
+053; Agustin Garrido; 37; Hospitalizacion
+054; Josefa Hidalgo; 42; Urgencias
+055; David Jara; 54; Cardiologia
+056; Renata Letelier; 17; Pediatria
+057; Franco Molina; 28; Traumatologia
+058; Amanda Neira; 36; Cirugia
+059; Cristobal Osorio; 49; Neurologia
+060; Vicente Perez; 24; Medicina General
+008; Roberto Duplicado; 40; Urgencias
+061; Paula Quinones; 39; Hospitalizacion
+062; Renato Ramirez; 41; Urgencias
+063; Leonor Saez; 52; Cardiologia
+064; Bruno Toledo; 15; Pediatria
+065; Emilia Urrutia; 31; Traumatologia
+066; Maximiliano Vera; 34; Cirugia
+067; Antonella Wong; 48; Neurologia
+068; Joaquin Yanez; 23; Medicina General
+069; Rafaela Zuuniga; 38; Hospitalizacion
+070; Vicente Aguilera; 44; Urgencias
+071; Isidora Bravo; 53; Cardiologia
+072; Martin Castillo; 18; Pediatria
+073; Sofia Duran; 30; Traumatologia
+074; Agustin Espinoza; 37; Cirugia
+075; Josefa Fuentes; 46; Neurologia
+076; Tomas Godoy; 22; Medicina General
+077; Emilia Henriquez; 39; Hospitalizacion
+078; Lucas Ibarra; 42; Urgencias
+079; Florencia Jeldres; 51; Cardiologia
+080; Mateo Kramer; 16; Pediatria
+081; Maite Leiva; 29; Traumatologia
+082; Simon Mansilla; 35; Cirugia
+083; Trinidad Navarrete; 47; Neurologia
+084; Alonso Olivares; 24; Medicina General
+085; Catalina Palma; 40; Hospitalizacion
+086; Diego Quezada; 41; Urgencias
+087; Rafaela Retamal; 52; Cardiologia
+088; Liam Saavedra; 17; Pediatria
+089; Julieta Toro; 31; Traumatologia
+090; Gabriel Urrea; 34; Cirugia
+091; Sofia Valenzuela; 48; Neurologia
+092; Samuel Zamorano; 23; Medicina General
+093; Amalia Aliste; 38; Hospitalizacion
+094; Tomas Baeza; 45; Urgencias
+095; Antonella Campos; 54; Cardiologia
+096; Martin Diaz; 19; Pediatria
+097; Ignacia Escobar; 28; Traumatologia
+098; Agustin Flores; 36; Cirugia
+099; Josefa Garrido; 49; Neurologia
+100; David Hidalgo; 25; Medicina General
+101; Renata Jara; 39; Hospitalizacion
+102; Franco Letelier; 42; Urgencias
+103; Amanda Molina; 51; Cardiologia
+104; Cristobal Neira; 15; Pediatria
+105; Vicente Osorio; 32; Traumatologia
+106; Paula Perez; 37; Cirugia
+107; Renato Quinones; 46; Neurologia
+108; Leonor Ramirez; 21; Medicina General
+109; Bruno Saez; 37; Hospitalizacion
+110; Emilia Toledo; 43; Urgencias
+111; Maximiliano Urrutia; 50; Cardiologia
+112; Antonella Vera; 14; Pediatria
+113; Joaquin Wong; 31; Traumatologia
+114; Rafaela Yanez; 38; Cirugia
+115; Vicente Zuuniga; 47; Neurologia
+116; Isidora Aguilera; 23; Medicina General
+117; Martin Bravo; 40; Hospitalizacion
+118; Sofia Castillo; 41; Urgencias
+119; Agustin Duran; 52; Cardiologia
+120; Josefa Espinoza; 17; Pediatria
+121; Tomas Fuentes; 30; Traumatologia
+122; Emilia Godoy; 35; Cirugia
+123; Lucas Henriquez; 49; Neurologia
+124; Florencia Ibarra; 24; Medicina General
+125; Mateo Jeldres; 39; Hospitalizacion
+126; Maite Kramer; 43; Urgencias
+127; Simon Leiva; 51; Cardiologia
+128; Trinidad Mansilla; 16; Pediatria
+129; Alonso Navarrete; 29; Traumatologia
+130; Catalina Olivares; 36; Cirugia
+131; Diego Palma; 48; Neurologia
+132; Rafaela Quezada; 22; Medicina General
+133; Liam Retamal; 38; Hospitalizacion
+134; Julieta Saavedra; 42; Urgencias
+135; Gabriel Toro; 53; Cardiologia
+136; Sofia Urrea; 18; Pediatria
+137; Samuel Valenzuela; 31; Traumatologia
+138; Amalia Zamorano; 34; Cirugia
+139; Tomas Aliste; 46; Neurologia
+140; Antonella Baeza; 21; Medicina General
+141; Martin Campos; 37; Hospitalizacion
+142; Ignacia Diaz; 41; Urgencias
+143; Agustin Escobar; 50; Cardiologia
+144; Josefa Flores; 15; Pediatria
+145; David Garrido; 30; Traumatologia
+146; Renata Hidalgo; 35; Cirugia
+147; Franco Jara; 47; Neurologia
+148; Amanda Letelier; 24; Medicina General
+149; Cristobal Molina; 38; Hospitalizacion
+150; Vicente Neira; 43; Urgencias
+151; Paula Osorio; 52; Cardiologia
+152; Renato Perez; 17; Pediatria
+153; Leonor Quinones; 32; Traumatologia
+154; Bruno Ramirez; 37; Cirugia
+155; Emilia Saez; 49; Neurologia
+156; Maximiliano Toledo; 22; Medicina General
+157; Antonella Urrutia; 36; Hospitalizacion
+158; Joaquin Vera; 41; Urgencias
+159; Rafaela Wong; 51; Cardiologia
+160; Vicente Yanez; 16; Pediatria
+161; Isidora Zuuniga; 29; Traumatologia
+162; Martin Aguilera; 35; Cirugia
+163; Sofia Bravo; 48; Neurologia
+164; Agustin Castillo; 24; Medicina General
+165; Josefa Duran; 39; Hospitalizacion
+166; Tomas Espinoza; 43; Urgencias
+167; Emilia Fuentes; 53; Cardiologia
+168; Lucas Godoy; 18; Pediatria
+169; Florencia Henriquez; 31; Traumatologia
+170; Mateo Ibarra; 34; Cirugia
+171; Maite Jeldres; 47; Neurologia
+172; Simon Kramer; 23; Medicina General
+173; Trinidad Leiva; 38; Hospitalizacion
+174; Alonso Mansilla; 41; Urgencias
+175; Catalina Navarrete; 52; Cardiologia
+176; Diego Olivares; 15; Pediatria
+177; Rafaela Palma; 30; Traumatologia
+178; Liam Quezada; 36; Cirugia
+179; Julieta Retamal; 49; Neurologia
+180; Gabriel Saavedra; 22; Medicina General
+181; Sofia Toro; 37; Hospitalizacion
+182; Samuel Urrea; 42; Urgencias
+183; Amalia Valenzuela; 51; Cardiologia
+184; Tomas Zamorano; 16; Pediatria
+185; Antonella Aliste; 29; Traumatologia
+186; Martin Baeza; 35; Cirugia
+187; Ignacia Campos; 48; Neurologia
+188; Agustin Diaz; 24; Medicina General
+189; Josefa Escobar; 39; Hospitalizacion
+190; David Flores; 43; Urgencias
+191; Renata Garrido; 53; Cardiologia
+192; Franco Hidalgo; 18; Pediatria
+193; Amanda Jara; 31; Traumatologia
+194; Cristobal Letelier; 34; Cirugia
+195; Vicente Molina; 46; Neurologia
+196; Paula Neira; 22; Medicina General
+197; Renato Osorio; 37; Hospitalizacion
+198; Leonor Perez; 42; Urgencias
+199; Bruno Quinones; 50; Cardiologia
+200; Emilia Ramirez; 15; Pediatria
+201; Maximiliano Saez; 30; Traumatologia
+202; Antonella Toledo; 36; Cirugia
+203; Joaquin Urrutia; 48; Neurologia
+204; Rafaela Vera; 23; Medicina General
+205; Vicente Wong; 38; Hospitalizacion
+206; Isidora Yanez; 41; Urgencias
+207; Martin Zuuniga; 52; Cardiologia
+208; Sofia Aguilera; 16; Pediatria
+209; Agustin Bravo; 29; Traumatologia
+210; Josefa Castillo; 35; Cirugia
+211; Tomas Duran; 47; Neurologia
+212; Emilia Espinoza; 24; Medicina General
+213; Lucas Fuentes; 39; Hospitalizacion
+214; Florencia Godoy; 43; Urgencias
+215; Mateo Henriquez; 51; Cardiologia
+216; Maite Ibarra; 17; Pediatria
+217; Simon Jeldres; 32; Traumatologia
+218; Trinidad Kramer; 37; Cirugia
+219; Alonso Leiva; 49; Neurologia
+220; Catalina Mansilla; 21; Medicina General
+221; Diego Navarrete; 37; Hospitalizacion
+222; Rafaela Olivares; 42; Urgencias
+223; Liam Palma; 53; Cardiologia
+224; Julieta Quezada; 15; Pediatria
+225; Gabriel Retamal; 30; Traumatologia
+226; Sofia Saavedra; 36; Cirugia
+227; Samuel Toro; 47; Neurologia
+228; Amalia Urrea; 22; Medicina General
+229; Tomas Valenzuela; 38; Hospitalizacion
+230; Antonella Zamorano; 41; Urgencias
+231; Martin Aliste; 52; Cardiologia
+232; Ignacia Baeza; 18; Pediatria
+233; Agustin Campos; 31; Traumatologia
+234; Josefa Diaz; 34; Cirugia
+235; David Escobar; 46; Neurologia
+236; Renata Flores; 23; Medicina General
+237; Franco Garrido; 39; Hospitalizacion
+238; Amanda Hidalgo; 43; Urgencias
+239; Cristobal Jara; 51; Cardiologia
+240; Vicente Letelier; 16; Pediatria
+241; Paula Molina; 29; Traumatologia
+242; Renato Neira; 36; Cirugia
+243; Leonor Osorio; 48; Neurologia
+244; Bruno Perez; 21; Medicina General
+245; Emilia Quinones; 37; Hospitalizacion
+246; Maximiliano Ramirez; 42; Urgencias
+247; Antonella Saez; 53; Cardiologia
+248; Joaquin Toledo; 17; Pediatria
+249; Rafaela Urrutia; 30; Traumatologia
+250; Vicente Vera; 35; Cirugia
+251; Isidora Wong; 47; Neurologia
+252; Martin Yanez; 24; Medicina General
+253; Sofia Zuuniga; 38; Hospitalizacion
+254; Agustin Aguilera; 41; Urgencias
+255; Josefa Bravo; 52; Cardiologia
+256; Tomas Castillo; 15; Pediatria
+257; Emilia Duran; 31; Traumatologia
+258; Lucas Espinoza; 34; Cirugia
+259; Florencia Fuentes; 49; Neurologia
+260; Mateo Godoy; 22; Medicina General
+261; Maite Henriquez; 37; Hospitalizacion
+262; Simon Ibarra; 42; Urgencias
+263; Trinidad Jeldres; 50; Cardiologia
+264; Alonso Kramer; 18; Pediatria
+265; Catalina Leiva; 30; Traumatologia
+266; Diego Mansilla; 36; Cirugia
+267; Rafaela Navarrete; 48; Neurologia
+268; Liam Olivares; 23; Medicina General
+269; Julieta Palma; 39; Hospitalizacion
+270; Gabriel Quezada; 43; Urgencias
+271; Sofia Retamal; 51; Cardiologia
+272; Samuel Saavedra; 16; Pediatria
+273; Amalia Toro; 29; Traumatologia
+274; Tomas Urrea; 35; Cirugia
+275; Antonella Valenzuela; 47; Neurologia
+276; Martin Zamorano; 21; Medicina General
+277; Ignacia Aliste; 38; Hospitalizacion
+278; Agustin Baeza; 41; Urgencias
+279; Josefa Campos; 52; Cardiologia
+280; David Diaz; 17; Pediatria
+281; Renata Escobar; 31; Traumatologia
+282; Franco Flores; 34; Cirugia
+283; Amanda Garrido; 48; Neurologia
+284; Cristobal Hidalgo; 22; Medicina General
+285; Vicente Jara; 37; Hospitalizacion
+286; Paula Letelier; 42; Urgencias
+287; Renato Molina; 51; Cardiologia
+288; Leonor Neira; 15; Pediatria
+289; Bruno Osorio; 30; Traumatologia
+290; Emilia Perez; 36; Cirugia
+291; Maximiliano Quinones; 49; Neurologia
+292; Antonella Ramirez; 23; Medicina General
+293; Joaquin Saez; 38; Hospitalizacion
+294; Rafaela Toledo; 43; Urgencias
+295; Vicente Urrutia; 52; Cardiologia
+296; Isidora Vera; 18; Pediatria
+297; Martin Wong; 31; Traumatologia
+298; Sofia Yanez; 35; Cirugia
+299; Agustin Zuuniga; 47; Neurologia
+300; Josefa Aguilera; 24; Medicina General
+301; Tomas Bravo; 39; Hospitalizacion
+302; Emilia Castillo; 42; Urgencias
+303; Lucas Duran; 53; Cardiologia
+304; Florencia Espinoza; 16; Pediatria
+305; Mateo Fuentes; 29; Traumatologia
+306; Maite Godoy; 34; Cirugia
+307; Simon Henriquez; 48; Neurologia
+308; Trinidad Ibarra; 21; Medicina General
+309; Alonso Jeldres; 37; Hospitalizacion
+310; Catalina Kramer; 41; Urgencias
+311; Diego Leiva; 52; Cardiologia
+312; Rafaela Mansilla; 17; Pediatria
+313; Liam Navarrete; 30; Traumatologia
+314; Julieta Olivares; 36; Cirugia
+315; Gabriel Palma; 49; Neurologia
+316; Sofia Quezada; 23; Medicina General
+317; Samuel Retamal; 38; Hospitalizacion
+318; Amalia Saavedra; 42; Urgencias
+319; Tomas Toro; 51; Cardiologia
+320; Antonella Urrea; 15; Pediatria
+321; Martin Valenzuela; 31; Traumatologia
+322; Ignacia Zamorano; 35; Cirugia
+323; Agustin Aliste; 47; Neurologia
+324; Josefa Baeza; 22; Medicina General
+325; David Campos; 37; Hospitalizacion
+326; Renata Diaz; 41; Urgencias
+327; Franco Escobar; 52; Cardiologia
+328; Amanda Flores; 18; Pediatria
+329; Cristobal Garrido; 29; Traumatologia
+330; Vicente Hidalgo; 34; Cirugia
+331; Paula Jara; 48; Neurologia
+332; Renato Letelier; 24; Medicina General
+333; Leonor Molina; 39; Hospitalizacion
+334; Bruno Neira; 43; Urgencias
+335; Emilia Osorio; 51; Cardiologia
+336; Maximiliano Perez; 16; Pediatria
+337; Antonella Quinones; 32; Traumatologia
+338; Joaquin Ramirez; 37; Cirugia
+339; Rafaela Saez; 49; Neurologia
+340; Vicente Toledo; 21; Medicina General
+341; Isidora Urrutia; 38; Hospitalizacion
+342; Martin Vera; 42; Urgencias
+343; Sofia Wong; 53; Cardiologia
+344; Agustin Yanez; 17; Pediatria
+345; Josefa Zuuniga; 30; Traumatologia
+346; Tomas Aguilera; 35; Cirugia
+347; Emilia Bravo; 47; Neurologia
+348; Lucas Castillo; 23; Medicina General
+349; Florencia Duran; 38; Hospitalizacion
+350; Mateo Espinoza; 41; Urgencias
+351; Maite Fuentes; 52; Cardiologia
+352; Simon Godoy; 15; Pediatria
+353; Trinidad Henriquez; 31; Traumatologia
+354; Alonso Ibarra; 36; Cirugia
+355; Catalina Jeldres; 49; Neurologia
+356; Diego Kramer; 22; Medicina General
+357; Rafaela Leiva; 39; Hospitalizacion
+358; Liam Mansilla; 43; Urgencias
+359; Julieta Navarrete; 50; Cardiologia
+360; Gabriel Olivares; 18; Pediatria
+361; Sofia Palma; 29; Traumatologia
+362; Samuel Quezada; 34; Cirugia
+363; Amalia Retamal; 47; Neurologia
+364; Tomas Saavedra; 24; Medicina General
+365; Antonella Toro; 37; Hospitalizacion
+366; Martin Urrea; 42; Urgencias
+367; Ignacia Valenzuela; 51; Cardiologia
+368; Agustin Zamorano; 16; Pediatria
+369; Josefa Aliste; 32; Traumatologia
+370; David Baeza; 37; Cirugia
+371; Renata Campos; 48; Neurologia
+372; Franco Diaz; 21; Medicina General
+373; Amanda Escobar; 39; Hospitalizacion
+374; Cristobal Flores; 43; Urgencias
+375; Vicente Garrido; 52; Cardiologia
+376; Paula Hidalgo; 17; Pediatria
+377; Renato Jara; 30; Traumatologia
+378; Leonor Letelier; 35; Cirugia
+379; Bruno Molina; 49; Neurologia
+380; Emilia Neira; 23; Medicina General
+381; Maximiliano Osorio; 38; Hospitalizacion
+382; Antonella Perez; 42; Urgencias
+383; Joaquin Quinones; 51; Cardiologia
+384; Rafaela Ramirez; 15; Pediatria
+385; Vicente Saez; 31; Traumatologia
+386; Isidora Toledo; 36; Cirugia
+387; Martin Urrutia; 47; Neurologia
+388; Sofia Vera; 22; Medicina General
+389; Agustin Wong; 37; Hospitalizacion
+390; Josefa Yanez; 41; Urgencias
+391; Tomas Zuuniga; 52; Cardiologia
+392; Emilia Aguilera; 18; Pediatria
+393; Lucas Bravo; 29; Traumatologia
+394; Florencia Castillo; 34; Cirugia
+395; Mateo Duran; 48; Neurologia
+396; Maite Espinoza; 24; Medicina General
+397; Simon Fuentes; 39; Hospitalizacion
+398; Trinidad Godoy; 43; Urgencias
+399; Alonso Henriquez; 50; Cardiologia
+400; Catalina Ibarra; 16; Pediatria
+401; Diego Jeldres; 32; Traumatologia
+402; Rafaela Kramer; 37; Cirugia
+403; Liam Leiva; 49; Neurologia
+404; Julieta Mansilla; 21; Medicina General
+405; Gabriel Navarrete; 38; Hospitalizacion
+406; Sofia Olivares; 41; Urgencias
+407; Samuel Palma; 52; Cardiologia
+408; Amalia Quezada; 15; Pediatria
+409; Tomas Retamal; 30; Traumatologia
+410; Antonella Saavedra; 35; Cirugia
+411; Martin Toro; 47; Neurologia
+412; Ignacia Urrea; 23; Medicina General
+413; Agustin Valenzuela; 39; Hospitalizacion
+414; Josefa Zamorano; 43; Urgencias
+415; David Aliste; 51; Cardiologia
+416; Renata Baeza; 17; Pediatria
+417; Franco Campos; 31; Traumatologia
+418; Amanda Diaz; 36; Cirugia
+419; Cristobal Escobar; 48; Neurologia
+420; Vicente Flores; 22; Medicina General
+421; Paula Garrido; 37; Hospitalizacion
+422; Renato Hidalgo; 41; Urgencias
+423; Leonor Jara; 52; Cardiologia
+424; Bruno Letelier; 16; Pediatria
+425; Emilia Molina; 29; Traumatologia
+426; Maximiliano Neira; 34; Cirugia
+427; Antonella Osorio; 49; Neurologia
+428; Joaquin Perez; 23; Medicina General
+429; Rafaela Quinones; 38; Hospitalizacion
+430; Vicente Ramirez; 42; Urgencias
+431; Isidora Saez; 51; Cardiologia
+432; Martin Toledo; 15; Pediatria
+433; Sofia Urrutia; 30; Traumatologia
+434; Agustin Vera; 35; Cirugia
+435; Josefa Wong; 47; Neurologia
+436; Tomas Yanez; 21; Medicina General
+437; Emilia Zuuniga; 37; Hospitalizacion
+438; Lucas Aguilera; 41; Urgencias
+439; Florencia Bravo; 52; Cardiologia
+440; Mateo Castillo; 17; Pediatria
+441; Maite Duran; 31; Traumatologia
+442; Simon Espinoza; 36; Cirugia
+443; Trinidad Fuentes; 48; Neurologia
+444; Alonso Godoy; 22; Medicina General
+445; Catalina Henriquez; 38; Hospitalizacion
+446; Diego Ibarra; 42; Urgencias
+447; Rafaela Jeldres; 51; Cardiologia
+448; Liam Kramer; 16; Pediatria
+449; Julieta Leiva; 30; Traumatologia
+450; Gabriel Mansilla; 35; Cirugia
+451; Sofia Navarrete; 49; Neurologia
+452; Samuel Olivares; 24; Medicina General
+453; Amalia Palma; 39; Hospitalizacion
+454; Tomas Quezada; 43; Urgencias
+455; Antonella Retamal; 52; Cardiologia
+456; Martin Saavedra; 18; Pediatria
+457; Ignacia Toro; 29; Traumatologia
+458; Agustin Urrea; 34; Cirugia
+459; Josefa Valenzuela; 47; Neurologia
+460; David Zamorano; 23; Medicina General
+461; Renata Aliste; 37; Hospitalizacion
+462; Franco Baeza; 42; Urgencias
+463; Amanda Campos; 51; Cardiologia
+464; Cristobal Diaz; 15; Pediatria
+465; Vicente Escobar; 30; Traumatologia
+466; Paula Flores; 36; Cirugia
+467; Renato Garrido; 49; Neurologia
+468; Leonor Hidalgo; 21; Medicina General
+469; Bruno Jara; 38; Hospitalizacion
+470; Emilia Letelier; 42; Urgencias
+471; Maximiliano Molina; 51; Cardiologia
+472; Antonella Neira; 16; Pediatria
+473; Joaquin Osorio; 29; Traumatologia
+474; Rafaela Perez; 35; Cirugia
+475; Vicente Quinones; 47; Neurologia
+476; Isidora Ramirez; 24; Medicina General
+477; Martin Saez; 39; Hospitalizacion
+478; Sofia Toledo; 43; Urgencias
+479; Agustin Urrutia; 52; Cardiologia
+480; Josefa Vera; 17; Pediatria
+481; Tomas Wong; 31; Traumatologia
+482; Emilia Yanez; 36; Cirugia
+483; Lucas Zuuniga; 49; Neurologia
+484; Florencia Aguilera; 22; Medicina General
+485; Mateo Bravo; 37; Hospitalizacion
+486; Maite Castillo; 41; Urgencias
+487; Simon Duran; 50; Cardiologia
+488; Trinidad Espinoza; 18; Pediatria
+489; Alonso Fuentes; 30; Traumatologia
+490; Catalina Godoy; 35; Cirugia
+491; Diego Henriquez; 48; Neurologia
+492; Rafaela Ibarra; 21; Medicina General
+493; Liam Jeldres; 38; Hospitalizacion
+494; Julieta Kramer; 42; Urgencias
+495; Gabriel Leiva; 51; Cardiologia
+496; Sofia Mansilla; 16; Pediatria
+497; Samuel Navarrete; 31; Traumatologia
+498; Amalia Olivares; 36; Cirugia
+499; Tomas Palma; 47; Neurologia
+500; Antonella Quezada; 24; Medicina General

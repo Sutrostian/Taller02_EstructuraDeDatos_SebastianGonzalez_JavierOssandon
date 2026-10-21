@@ -1,0 +1,61 @@
+001;Tomas Diaz;11;Pediatria
+002;Maria Rojas;62;Medicina General
+003;Isidora Soto;20;Neurologia
+004;Pedro Silva;2;Pediatria
+005;Sofia Rojas;1;Pediatria
+006;Josefa Reyes;44;Medicina General
+007;Francisca Reyes;89;Urgencias
+008;Isidora Gonzalez;44;Urgencias
+009;Maria Morales;53;Cardiologia
+010;Matias Diaz;89;Medicina General
+011;Fernanda Morales;29;Cardiologia
+012;Isidora Reyes;63;Neurologia
+013;Ana Morales;88;Medicina General
+014;Maria Gutierrez;79;Neurologia
+015;Vicente Morales;13;Pediatria
+016;Tomas Lopez;62;Hospitalizacion
+017;Fernanda Vargas;47;Cardiologia
+018;Pedro Reyes;83;Traumatologia
+019;Sebastian Herrera;52;Hospitalizacion
+020;Gaspar Rojas;81;Medicina General
+021;Matias Fuentes;35;Cirugia
+022;Felipe Martinez;1;Pediatria
+023;Vicente Rojas;59;Cirugia
+024;Constanza Rios;90;Hospitalizacion
+025;Nicolas Lopez;27;Medicina General
+026;Ricardo Martinez;23;Medicina General
+027;Benjamin Castro;52;Hospitalizacion
+028;Constanza Gonzalez;18;Cirugia
+029;Javiera Rios;94;Cardiologia
+030;Ana Martinez;43;Urgencias
+031;Martina Castro;47;Cardiologia
+032;Camila Gonzalez;26;Hospitalizacion
+033;Carla Lopez;9;Pediatria
+034;Ricardo Diaz;14;Pediatria
+035;Cristobal Salinas;6;Pediatria
+036;Vicente Gonzalez;35;Neurologia
+037;Pedro Fuentes;45;Cardiologia
+038;Vicente Vargas;78;Urgencias
+039;Josefa Reyes;49;Cardiologia
+040;Fernanda Perez;69;Cardiologia
+
+041;Camila Vidal;29;Urgencias
+042;;30;Cardiologia
+043;Pedro Aguilar;;Urgencias
+044;Pedro Aguilar;30;
+045;Pedro Aguilar;30
+046;Pedro Aguilar;30;Cardiologia;ExtraCampo
+abc;Nombre Invalido;30;Urgencias
+047;Nombre Edad Invalida;treinta;Urgencias
+048;Nombre Servicio Invalido;40;Oftalmologia
+001;Juan Perez Duplicado;40;Urgencias
+049;   Espacios   Extra   ;40;Cardiologia
+-050;Id Negativo;40;Urgencias
+051;Edad Negativa;-5;Urgencias
+052;Edad Cero;0;Urgencias
+053;Edad Extrema;120;Hospitalizacion
+054;urgencias minuscula;30;urgencias
+055;Servicio Con Espacio;30; Cardiologia
+solo texto sin formato correcto
+;;;+
+056;Ultimo Paciente Valido;33;Pediatria
