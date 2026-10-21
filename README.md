@@ -1,4 +1,4 @@
-# Taller 1 Estructura de Datos Hospital Marmaja 
+# Taller 2 Estructura de Datos Hospital Marmaja 
 
 ## Descripción
 Sistema básico de gestión de pacientes de un hospital, desarrollado utilizando punteros,
@@ -76,14 +76,10 @@ Seleccionar opcion:
 
 ## Formato del archivo de entrada
 ```
-ID;Nombre;Edad;Servicio
+ID;Nombre;Edad;Temperatura;PresionArterial;Dolor;TipoDolor;
+Trauma;SintomasNeurologicos;RequiereCirugia;DiasHospitalizacion
 ```
 
-Ejemplo:
-```
-001;Juan Perez;25;Cardiologia
-002;Maria Soto;67;Urgencias
-```
 
 ## Servicios disponibles
 Urgencias, Medicina General, Cardiología, Neurología, Traumatología, Cirugía, Pediatría, Hospitalización
