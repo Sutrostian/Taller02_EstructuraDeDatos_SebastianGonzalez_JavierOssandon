@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include "logica/Queue.h"
 #include "logica/ListaServicios.h"
+#include "logica/Hospital.h"
 #include "logica/Stack.h"
 #include "dominio/Paciente.h"
 #include "logica/ArbolDecision.h"
@@ -238,7 +239,7 @@ void cargarPacientesDesdeArchivo(Queue *colaEspera, const string &nombreArchivo)
 int main()
 {
     Queue *colaEspera = new Queue();
-    ListaServicios *hospital = new ListaServicios();
+    Hospital *hospital = new Hospital();
     Stack *historial = new Stack();
     ArbolDecision *arbol = new ArbolDecision();
 
@@ -292,11 +293,17 @@ int main()
                          << ", RequiereCirugia: " << p->getRequiereCirugia() << ", DiasHospitalizacion: " << p->getDiasHospitalizacion()
                          << "\nRuta: "<< ruta << "\nServicio asignado: " << servicioAsignado << endl;
 
-                    hospital->agregarPaciente(p->getServicio(), p);
-                    historial->apilar(p);
-
-                    cout << "Paciente enviado a " << p->getServicio() << ".\n"
-                         << endl;
+                    if (hospital->agregarPaciente(p->getServicio(), p))
+                    {
+                        historial->apilar(p);
+                        cout << "Paciente insertado en el AVL de " << p->getServicio() << ".\n"
+                        << endl;
+                    }
+                    else
+                    {
+                        cout << "No se pudo insertar al paciente " << p->getId() << " (ID repetido)." << endl;
+                        delete p; // si no entro al avl lo borro yo
+                    }
                 }
             }
             break;
@@ -342,12 +349,15 @@ int main()
                 break;
             }
 
-            encontrado = hospital->buscarPacientePorId(idBuscado);
+            string servicioEncontrado, rutaBusqueda;
+            encontrado = hospital->buscarPorId(idBuscado, servicioEncontrado, rutaBusqueda);
             if (encontrado != nullptr)
             {
                 cout << "\nPaciente encontrado (ya atendido):" << endl;
                 cout << "ID: " << encontrado->getId() << "\nNombre: " << encontrado->getNombre()
                      << "\nEdad: " << encontrado->getEdad() << "\nServicio: " << encontrado->getServicio() << endl;
+                cout << "Departamento: " << servicioEncontrado << endl;
+                cout << "Ruta de busqueda: " << rutaBusqueda << endl;   
                 break;
             }
 
