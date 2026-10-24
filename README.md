@@ -57,10 +57,10 @@ Al ejecutar el programa se carga el archivo de pacientes y se muestra el menú p
 Seleccionar opcion:
 ```
 
-- **Atender pacientes**: muestra la cola de espera y permite indicar cuántos atender. Cada paciente se saca de la cola, se evalúa con el árbol de decisión (se muestra la ruta seguida), se le asigna el servicio y se registra en el historial.
+- **Atender pacientes**: muestra la cola de espera y permite indicar cuántos atender. Cada paciente se saca de la cola, se evalúa con el árbol de decisión (se muestra la ruta seguida), se le asigna el servicio, se inserta en el AVL de ese servicio y se registra en el historial.
 - **Ver departamento**: muestra la cantidad de pacientes por servicio y permite consultar el detalle de uno.
 - **Revisar historial de atención**: muestra el registro de atenciones, de la más reciente a la más antigua.
-- **Buscar paciente por ID**: busca un paciente en la cola de espera y en los servicios.
+- **Buscar paciente por ID**: busca un paciente en la cola de espera y en los AVL de los servicios. Si ya fue atendido, muestra su departamento y la ruta de búsqueda dentro del AVL.
 - **Ver árbol de decisión**: muestra los recorridos preorden, inorden y postorden del árbol.
 - **Salir**: termina la ejecución liberando la memoria dinámica.
 
@@ -109,7 +109,7 @@ Las preguntas se evalúan en este orden, y la primera que se cumple define el ca
 ¿DiasHospitalizacion >= 2?         Sí -> Hospitalizacion / No -> Medicina General
 ```
 
-Atributos utilizados (8): Temperatura, Dolor, PresionArterial, Edad, Trauma, SintomasNeurologicos, TipoDolor, RequiereCirugia y DiasHospitalizacion. Los ocho servicios tienen al menos una ruta.
+Atributos utilizados (9): Temperatura, Dolor, PresionArterial, Edad, Trauma, SintomasNeurologicos, TipoDolor, RequiereCirugia y DiasHospitalizacion. Los ocho servicios tienen al menos una ruta.
 
 ### Justificación
 - **Urgencias primero**: los signos vitales críticos (fiebre alta, dolor intenso, presión muy alta o muy baja) indican riesgo inmediato y deben atenderse antes de pensar en la especialidad, incluso en niños.
@@ -138,11 +138,11 @@ Cada servicio tiene su propio AVL, con el **ID del paciente como clave de ordena
 │   ├── dominio/     → Persona.h, Paciente.h
 │   └── logica/      → NodoQueue.h, Queue.h, NodoHistorial.h, Stack.h,
 │                       NodoPacienteServicio.h, NodoServicio.h, ListaServicios.h,
-│                       NodoDecision.h, ArbolDecision.h, NodoAVL.h, AVL.h
+│                       NodoDecision.h, ArbolDecision.h, NodoAVL.h, AVL.h, Hospital.h
 ├── src/
 │   ├── dominio/     → Persona.cpp, Paciente.cpp
 │   ├── logica/      → Queue.cpp, Stack.cpp, ListaServicios.cpp,
-│   │                   ArbolDecision.cpp, AVL.cpp
+│   │                   ArbolDecision.cpp, AVL.cpp, Hospital.cpp
 │   └── main.cpp     → carga del archivo, menú principal
 ├── data/            → pacientes_prueba_t2.txt (formato del Taller 2) y archivos del Taller 1
 ├── .gitignore
@@ -160,7 +160,7 @@ Cada servicio tiene su propio AVL, con el **ID del paciente como clave de ordena
 - [x] Historial de atenciones (Stack) - LIFO
 - [x] Árbol de decisión: construcción, evaluación con ruta y recorridos
 - [x] Árbol AVL con rotaciones, inserción, búsqueda, eliminación y recorridos
-- [ ] Un AVL por servicio integrado al flujo de atención
+- [x] Un AVL por servicio integrado al flujo de atención
 - [ ] Menú con recorridos, altura y factor de balance por servicio
 - [ ] Búsqueda por ID o nombre con ruta de búsqueda en el AVL
 - [ ] Liberación de memoria verificada con valgrind
