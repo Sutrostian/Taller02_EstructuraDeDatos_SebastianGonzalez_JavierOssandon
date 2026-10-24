@@ -80,6 +80,23 @@ bool esTipoDolorValido(const string &tipo)
     return false;
 }
 
+int leerEntero(const char *mensaje)// Lee un entero validando la entrada; si no es numero, vuelve a pedirlo
+{
+    int valor;
+    while (true)
+    {
+        cout << mensaje;
+        if (cin >> valor)
+        {
+            cin.ignore(10000, '\n'); // descarta el resto de la linea
+            return valor;
+        }
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Entrada invalida. Ingrese un numero." << endl;
+    }
+}
+
 char *siguienteCampo(char *&ptr)
 {
     if (ptr == nullptr)
@@ -255,8 +272,7 @@ int main()
         cout << "4. Buscar paciente por ID" << endl;
         cout << "5. Ver arbol de decision" << endl;
         cout << "6. Salir" << endl;
-        cout << "Seleccionar opcion: ";
-        cin >> opcion;
+        opcion = leerEntero("Seleccionar opcion: ");
         cout << endl;
 
         switch (opcion)
@@ -267,9 +283,7 @@ int main()
 
             if (!colaEspera->estaVacia())
             {
-                int cantidad;
-                cout << "\nIndique la cantidad de pacientes a atender: ";
-                cin >> cantidad;
+                int cantidad = leerEntero("\nIndique la cantidad de pacientes a atender: ");
 
                 cout << "\n=== ATENDIENDO PACIENTES ===" << endl;
                 for (int i = 0; i < cantidad; i++)
@@ -312,21 +326,33 @@ int main()
         {
             hospital->mostrarTodos();
 
-            int opcDepto;
-            cout << "\nSeleccionar departamento (1-8) o 0 para cancelar: ";
-            cin >> opcDepto;
-
-            string nombresServicios[] = {"Urgencias", "Medicina General", "Cardiologia",
-                                         "Neurologia", "Traumatologia", "Cirugia",
-                                         "Pediatria", "Hospitalizacion"};
-
+            int opcDepto = leerEntero("\nSeleccionar departamento (1-8) o 0 para cancelar: ");
             if (opcDepto >= 1 && opcDepto <= 8)
             {
+                int idx = opcDepto - 1;
+                int sub;
+            do
+            {
+                cout << "\n--- " << hospital->getNombreServicio(idx) << " ---" << endl;
+                cout << "1. Recorrido inorden" << endl;
+                cout << "2. Recorrido preorden" << endl;
+                cout << "3. Recorrido postorden" << endl;
+                cout << "4. Mostrar altura" << endl;
+                cout << "5. Mostrar factor de balance" << endl;
+                cout << "0. Volver" << endl;
+                sub = leerEntero("Opcion: ");
                 cout << endl;
-                hospital->mostrarServicio(nombresServicios[opcDepto - 1]);
+
+                if (sub >= 1 && sub <= 3)
+                    hospital->mostrarRecorrido(idx, sub);
+                else if (sub == 4)
+                    hospital->mostrarAltura(idx);
+                else if (sub == 5)
+                    hospital->mostrarBalance(idx);
+            } while (sub != 0);
             }
             cout << endl;
-            break;
+        break;
         }
         case 3:
         {

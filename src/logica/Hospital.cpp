@@ -87,3 +87,40 @@ Hospital::~Hospital()
     for (int i = 0; i < 8; i++)
         delete arboles[i];
 }
+
+string Hospital::getNombreServicio(int indice)
+{
+    return nombres[indice];
+}
+
+void Hospital::mostrarRecorrido(int indice, int tipo)
+{
+    if (indice < 0 || indice >= 8)
+        return;
+    if (tipo == 1)
+    {
+        cout << "Inorden de " << nombres[indice] << ":" << endl;
+        arboles[indice]->mostrarInorden();
+    }
+    else if (tipo == 2)
+    {
+        cout << "Preorden de " << nombres[indice] << ":" << endl;
+        arboles[indice]->mostrarPreorden();
+    }
+    else if (tipo == 3)
+    {
+        cout << "Postorden de " << nombres[indice] << ":" << endl;
+        arboles[indice]->mostrarPostorden();
+    }
+}
+
+void Hospital::mostrarAltura(int indice)
+{
+    cout << "Altura del AVL de " << nombres[indice] << ": " << arboles[indice]->getAltura() << endl;
+}
+
+void Hospital::mostrarBalance(int indice)
+{
+    cout << "Factor de balance en " << nombres[indice] << ":" << endl;
+    arboles[indice]->mostrarBalance();
+}
