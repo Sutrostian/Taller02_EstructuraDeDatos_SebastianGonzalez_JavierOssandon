@@ -1,0 +1,16 @@
+001;Javier Ossandón;25;37.0;120;3;otro;0;0;0;0
+002;Sebastian Gonzalez;10;37.8;105;4;abdomen;0;0;0;0
+003;Mateo Godoy;40;36.9;130;7;extremidad;1;0;1;5
+004;Alvaro Tapia;31;36.7;125;6;extremidad;1;0;0;0
+005;Damian Valdivia;52;37.1;140;5;cabeza;0;1;0;1
+006;Harold Ramos;67;36.8;160;7;pecho;0;0;0;1
+007;Martin Droguett;19;39.2;115;5;abdomen;0;0;0;0
+008;Nicolas Rojas;74;37.3;135;2;otro;0;0;0;4
+003;Jhon Pineda;30;36.5;120;2;otro;0;0;0;0
+009;Jhon DosSantos;24;37.0;118;3
+010;Jhon UCN;33;3x.5;120;2;otro;0;0;0;0
+011;Jhon Estructuras;27;36.9;110;15;otro;0;0;0;0
+012;Yame Canse;60;37.0;130;4;espalda;0;0;0;0
+013;Jason Duval;45;36.6;125;3;otro;2;0;0;0
+;Sin Id;20;36.5;120;1;otro;0;0;0;0
+014; ;30;36.5;120;1;otro;0;0;0;0
