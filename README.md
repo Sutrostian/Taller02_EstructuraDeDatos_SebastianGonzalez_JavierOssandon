@@ -51,18 +51,20 @@ Al ejecutar el programa se carga el archivo de pacientes y se muestra el menú p
 1. Atender pacientes
 2. Ver departamento
 3. Revisar historial de atencion
-4. Buscar paciente por ID
+4. Buscar paciente por ID o nombre
 5. Ver arbol de decision
 6. Salir
 Seleccionar opcion:
 ```
 
 - **Atender pacientes**: muestra la cola de espera y permite indicar cuántos atender. Cada paciente se saca de la cola, se evalúa con el árbol de decisión (se muestra la ruta seguida), se le asigna el servicio, se inserta en el AVL de ese servicio y se registra en el historial.
-- **Ver departamento**: muestra la cantidad de pacientes por servicio y permite consultar el detalle de uno.
+- **Ver departamento**: muestra la cantidad de pacientes por servicio y permite elegir uno para abrir su submenú, con las opciones: recorrido inorden, preorden y postorden, altura del AVL y factor de balance de cada nodo.
 - **Revisar historial de atención**: muestra el registro de atenciones, de la más reciente a la más antigua.
-- **Buscar paciente por ID**: busca un paciente en la cola de espera y en los AVL de los servicios. Si ya fue atendido, muestra su departamento y la ruta de búsqueda dentro del AVL.
+- **Buscar paciente por ID o nombre**: si lo ingresado es numérico se busca por ID; si no, por nombre. Busca primero en la cola de espera y luego en los AVL de los servicios. Si el paciente ya fue atendido, muestra su departamento, sus datos clínicos y la ruta de búsqueda dentro del AVL.
 - **Ver árbol de decisión**: muestra los recorridos preorden, inorden y postorden del árbol.
 - **Salir**: termina la ejecución liberando la memoria dinámica.
+
+- Las opciones numéricas del menú están validadas: si se ingresa un texto en vez de un número, el programa avisa y vuelve a pedir el dato.
 
 ## Formato del archivo de entrada
 Un paciente por línea, con los campos separados por `;`:
@@ -161,9 +163,9 @@ Cada servicio tiene su propio AVL, con el **ID del paciente como clave de ordena
 - [x] Árbol de decisión: construcción, evaluación con ruta y recorridos
 - [x] Árbol AVL con rotaciones, inserción, búsqueda, eliminación y recorridos
 - [x] Un AVL por servicio integrado al flujo de atención
-- [ ] Menú con recorridos, altura y factor de balance por servicio
-- [ ] Búsqueda por ID o nombre con ruta de búsqueda en el AVL
-- [ ] Liberación de memoria verificada con valgrind
+- [x] Menú con recorridos, altura y factor de balance por servicio
+- [x] Búsqueda por ID o nombre con ruta de búsqueda en el AVL
+- [ ] Liberación de memoria
 
 ## Casos de prueba (`data/pacientes_prueba_t2.txt`)
 
