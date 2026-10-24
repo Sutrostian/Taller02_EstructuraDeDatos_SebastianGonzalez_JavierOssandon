@@ -6,7 +6,8 @@
 #include "logica/ListaServicios.h"
 #include "logica/Stack.h"
 #include "dominio/Paciente.h"
-
+#include "logica/ArbolDecision.h"
+#include <iomanip>// para mostrar temperaturas con 1 decimal
 using namespace std;
 
 // Valida que un string represente un numero entero positivo (solo digitos, sin signo)
@@ -239,6 +240,7 @@ int main()
     Queue *colaEspera = new Queue();
     ListaServicios *hospital = new ListaServicios();
     Stack *historial = new Stack();
+    ArbolDecision *arbol = new ArbolDecision();
 
     cargarPacientesDesdeArchivo(colaEspera, "data/pacientes_prueba_t2.txt");
 
@@ -250,7 +252,8 @@ int main()
         cout << "2. Ver departamento" << endl;
         cout << "3. Revisar historial de atencion" << endl;
         cout << "4. Buscar paciente por ID" << endl;
-        cout << "5. Salir" << endl;
+        cout << "5. Ver arbol de decision" << endl;
+        cout << "6. Salir" << endl;
         cout << "Seleccionar opcion: ";
         cin >> opcion;
         cout << endl;
@@ -278,8 +281,15 @@ int main()
 
                     Paciente *p = colaEspera->eliminar();
 
-                    cout << "ID: " << p->getId() << "\nNombre: " << p->getNombre()
-                         << "\nEdad: " << p->getEdad() << "\nServicio: " << p->getServicio() << endl;
+                    string ruta;
+                    string servicioAsignado = arbol->evaluar(p, ruta);
+
+                    cout << "ID: " << p->getId() << ", Nombre: " << p->getNombre() << ", Edad: " << p->getEdad()
+                    << ", Temperatura: " << fixed << setprecision(1) << p->getTemperatura() << ", Presion: " << p->getPresionArterial()
+                         << ", Dolor: " << p->getDolor() << ", TipoDolor: " << p->getTipoDolor()
+                         << ", Trauma: " << p->getTrauma() << ", SintomasNeuro: " << p->getSintomasNeurologicos()
+                         << ", RequiereCirugia: " << p->getRequiereCirugia() << ", DiasHospitalizacion: " << p->getDiasHospitalizacion()
+                         << "\nRuta: "<< ruta << "\nServicio asignado: " << servicioAsignado << endl;
 
                     hospital->agregarPaciente(p->getServicio(), p);
                     historial->apilar(p);
@@ -344,17 +354,29 @@ int main()
             break;
         }
         case 5:
+        {
+            cout << "\n=== ARBOL DE DECISION ===" << endl;
+            arbol->mostrarPreorden();
+            cout << endl;
+            arbol->mostrarInorden();
+            cout << endl;
+            arbol->mostrarPostorden();
+            cout << endl;
+            break;
+        }
+        
+        case 6:
             cout << "Hasta luego : D." << endl;
             break;
         default:
             cout << "Opcion invalida. Intente nuevamente." << endl
                  << endl;
         }
-    } while (opcion != 5);
+    } while (opcion != 6);
 
     delete colaEspera;
     delete historial;
     delete hospital;
-
+    delete arbol;
     return 0;
 }
