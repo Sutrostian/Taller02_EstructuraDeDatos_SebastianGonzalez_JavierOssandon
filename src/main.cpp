@@ -283,6 +283,7 @@ int main()
 
                     string ruta;
                     string servicioAsignado = arbol->evaluar(p, ruta);
+                    p->setServicio(servicioAsignado); // guardo el servicio que asignado por el arbol
 
                     cout << "ID: " << p->getId() << ", Nombre: " << p->getNombre() << ", Edad: " << p->getEdad()
                     << ", Temperatura: " << fixed << setprecision(1) << p->getTemperatura() << ", Presion: " << p->getPresionArterial()
