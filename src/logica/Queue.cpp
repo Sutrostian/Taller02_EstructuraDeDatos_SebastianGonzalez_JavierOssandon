@@ -125,3 +125,15 @@ Paciente *Queue::buscarPorId(int idBuscado)
     }
     return nullptr; // no se encontro
 }
+
+Paciente *Queue::buscarPorNombre(string nombre)
+{
+    NodoQueue *aux = start;
+    while (aux != nullptr)
+    {
+        if (aux->paciente->getNombre() == nombre)
+            return aux->paciente;
+        aux = aux->next;
+    }
+    return nullptr;
+}

@@ -269,7 +269,7 @@ int main()
         cout << "1. Atender pacientes" << endl;
         cout << "2. Ver departamento" << endl;
         cout << "3. Revisar historial de atencion" << endl;
-        cout << "4. Buscar paciente por ID" << endl;
+        cout << "4. Buscar paciente por ID o nombre" << endl;
         cout << "5. Ver arbol de decision" << endl;
         cout << "6. Salir" << endl;
         opcion = leerEntero("Seleccionar opcion: ");
@@ -362,32 +362,65 @@ int main()
         }
         case 4:
         {
-            int idBuscado;
-            cout << "Ingrese el ID del paciente a buscar: ";
-            cin >> idBuscado;
+            cout << "Indique el ID o Nombre del paciente: ";
+            string entrada;
+            getline(cin, entrada);
+            if (!entrada.empty() && entrada.back() == '\r')
+                entrada.pop_back();
 
-            Paciente *encontrado = colaEspera->buscarPorId(idBuscado);
-            if (encontrado != nullptr)
-            {
-                cout << "\nPaciente encontrado (en espera):" << endl;
-                cout << "ID: " << encontrado->getId() << "\nNombre: " << encontrado->getNombre()
-                     << "\nEdad: " << encontrado->getEdad() << "\nServicio: " << encontrado->getServicio() << endl;
-                break;
-            }
-
+            Paciente *encontrado = nullptr;
+            bool enEspera = false;
             string servicioEncontrado, rutaBusqueda;
-            encontrado = hospital->buscarPorId(idBuscado, servicioEncontrado, rutaBusqueda);
-            if (encontrado != nullptr)
+
+            if (esEnteroValido(entrada.c_str()))
             {
-                cout << "\nPaciente encontrado (ya atendido):" << endl;
-                cout << "ID: " << encontrado->getId() << "\nNombre: " << encontrado->getNombre()
-                     << "\nEdad: " << encontrado->getEdad() << "\nServicio: " << encontrado->getServicio() << endl;
-                cout << "Departamento: " << servicioEncontrado << endl;
-                cout << "Ruta de busqueda: " << rutaBusqueda << endl;   
+                int id = atoi(entrada.c_str());
+                encontrado = colaEspera->buscarPorId(id);
+                if (encontrado != nullptr)
+                    enEspera = true;
+                else
+                    encontrado = hospital->buscarPorId(id, servicioEncontrado, rutaBusqueda);
+            }
+            else
+            {
+                encontrado = colaEspera->buscarPorNombre(entrada);
+                if (encontrado != nullptr)
+                    enEspera = true;
+                else
+                {
+                    encontrado = hospital->buscarPorNombre(entrada);
+                    if (encontrado != nullptr) // con el ID obtengo servicio y ruta
+                        hospital->buscarPorId(encontrado->getId(), servicioEncontrado, rutaBusqueda);
+                }
+            }
+
+            if (encontrado == nullptr)
+            {
+                cout << "No se encontro ningun paciente con ese ID o nombre." << endl;
                 break;
             }
 
-            cout << "No se encontro ningun paciente con ID " << idBuscado << "." << endl;
+            cout << "\nPaciente encontrado:" << endl;
+            cout << "-------" << endl;
+            cout << "ID: " << encontrado->getId() << "\nNombre: " << encontrado->getNombre()
+                 << "\nEdad: " << encontrado->getEdad() << endl;
+            if (enEspera)
+            {
+                cout << "Estado: En espera (pendiente de clasificacion)" << endl;
+            }
+            else
+            {
+                cout << "Departamento: " << servicioEncontrado << endl;
+                cout << "T: " << fixed << setprecision(1) << encontrado->getTemperatura()
+                     << " | D: " << encontrado->getDolor()
+                     << " | TD: " << encontrado->getTipoDolor()
+                     << " | Tr: " << (encontrado->getTrauma() ? "Si" : "No")
+                     << " | SN: " << (encontrado->getSintomasNeurologicos() ? "Si" : "No")
+                     << " | RC: " << (encontrado->getRequiereCirugia() ? "Si" : "No")
+                     << " | DH: " << encontrado->getDiasHospitalizacion() << endl;
+                cout << "-------" << endl;
+                cout << "Ruta de busqueda: " << rutaBusqueda << endl;
+            }
             break;
         }
         case 5:

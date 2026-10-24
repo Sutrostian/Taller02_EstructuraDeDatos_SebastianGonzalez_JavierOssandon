@@ -15,5 +15,6 @@ public:
     void mostrar();
     bool existePaciente(int idBuscado);
     Paciente *buscarPorId(int idBuscado);
+    Paciente *buscarPorNombre(string nombre);
     ~Queue();
 };
