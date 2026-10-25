@@ -82,6 +82,21 @@ Paciente *Hospital::buscarPorNombre(string nombre)
     return nullptr;
 }
 
+Paciente *Hospital::eliminarPorId(int id, string &servicio)
+{
+    for (int i = 0; i < 8; i++)
+    {
+        Paciente *p = arboles[i]->eliminar(id);
+        if (p != nullptr)
+        {
+            servicio = nombres[i];
+            return p;
+        }
+    }
+    return nullptr;
+}
+
+
 Hospital::~Hospital()
 {
     for (int i = 0; i < 8; i++)

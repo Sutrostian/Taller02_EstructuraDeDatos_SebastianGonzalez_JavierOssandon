@@ -271,7 +271,8 @@ int main()
         cout << "3. Revisar historial de atencion" << endl;
         cout << "4. Buscar paciente por ID o nombre" << endl;
         cout << "5. Ver arbol de decision" << endl;
-        cout << "6. Salir" << endl;
+        cout << "6. Eliminar paciente por ID" << endl;
+        cout << "7. Salir" << endl;
         opcion = leerEntero("Seleccionar opcion: ");
         cout << endl;
 
@@ -434,15 +435,31 @@ int main()
             cout << endl;
             break;
         }
-        
         case 6:
+        {
+            int idEliminar = leerEntero("Ingrese el ID del paciente a eliminar: ");
+            string servicioEliminado;
+            Paciente *eliminado = hospital->eliminarPorId(idEliminar, servicioEliminado);
+            if (eliminado != nullptr)
+            {
+                cout << "Paciente con ID " << idEliminar << " eliminado del servicio " << servicioEliminado << "." << endl;
+                delete eliminado; // Liberar memoria del paciente eliminado
+            }
+            else
+            {
+                cout << "No se encontro ningun paciente con ID " << idEliminar << ", verifique que el paciente exista y que no este en la cola de espera." << endl;
+            }
+            break;
+        }
+
+        case 7:
             cout << "Hasta luego : D." << endl;
             break;
         default:
             cout << "Opcion invalida. Intente nuevamente." << endl
                  << endl;
         }
-    } while (opcion != 6);
+    } while (opcion != 7);
 
     delete colaEspera;
     delete historial;

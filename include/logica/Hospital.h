@@ -19,6 +19,7 @@ public:
     void mostrarServicio(string servicio);
     Paciente *buscarPorId(int id, string &servicio, string &ruta);
     Paciente *buscarPorNombre(string nombre);
+    Paciente *eliminarPorId(int id, string &servicio);
     string getNombreServicio(int indice);
     void mostrarRecorrido(int indice, int tipo); // 1 inorden, 2 preorden, 3 postorden
     void mostrarAltura(int indice);
