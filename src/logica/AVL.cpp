@@ -295,6 +295,34 @@ void AVL::mostrarBalance()
         mostrarBalance(raiz);
 }
 
+void AVL::mostrarNombres(NodoAVL *nodo, bool &primero)
+{
+    if (nodo == nullptr)
+        return;
+    mostrarNombres(nodo->izq, primero);
+    if (!primero)
+    cout << ", ";
+    cout << nodo->paciente->getNombre() 
+    << " (" 
+    << nodo->paciente->getId() 
+    << ")";
+    primero = false;
+    mostrarNombres(nodo->der, primero);
+}
+
+void AVL::mostrarNombres()
+{
+    if (estaVacio())
+    {
+        cout << "Sin pacientes" << endl;
+        return;
+    }
+    bool primero = true;
+    cout << "Pacientes: ";
+    mostrarNombres(raiz, primero);
+    cout << endl;
+}
+
 void AVL::liberar(NodoAVL *nodo)
 {
     if (nodo == nullptr)

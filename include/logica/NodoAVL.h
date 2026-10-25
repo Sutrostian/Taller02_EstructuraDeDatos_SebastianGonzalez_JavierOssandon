@@ -9,3 +9,4 @@ public:
     NodoAVL *der;
     int altura;
 };
+

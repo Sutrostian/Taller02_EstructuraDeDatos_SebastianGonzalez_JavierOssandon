@@ -29,6 +29,7 @@ private:
     void preorden(NodoAVL *nodo);
     void postorden(NodoAVL *nodo);
     void mostrarBalance(NodoAVL *nodo);
+    void mostrarNombres(NodoAVL *nodo, bool &primero);
     void liberar(NodoAVL *nodo);
 
 public:
@@ -44,5 +45,6 @@ public:
     void mostrarPreorden();
     void mostrarPostorden();
     void mostrarBalance();
+    void mostrarNombres();
     ~AVL();
 };

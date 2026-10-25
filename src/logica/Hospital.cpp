@@ -36,11 +36,13 @@ bool Hospital::agregarPaciente(string servicio, Paciente *p)
 
 void Hospital::mostrarTodos()
 {
-    cout << "Lista de Servicios y cantidad de pacientes:" << endl;
-    for (int i = 0; i < 8; i++)
+cout << "=== ESTADO DE LOS DEPARTAMENTOS ===" << endl;
+for (int i = 0; i < 8; i++)
     {
         cout << (i + 1) << ". " << nombres[i] << " - "
-             << arboles[i]->getCantidad() << " pacientes" << endl;
+        << arboles[i]->getCantidad() << " pacientes" << endl;
+        cout << "   ";
+        arboles[i]->mostrarNombres();
     }
 }
 
