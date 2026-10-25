@@ -20,23 +20,21 @@ void Stack::apilar(Paciente *p)
     top = nuevo;            // el top pasa a ser el nuevo nodo
 }
 
-Paciente *Stack::desapilar()
+bool Stack::desapilar()
 {
     if (estaVacia())
     {
-        return nullptr;
+        return false;
     }
 
     NodoHistorial *aux = top;
-    Paciente *p = aux->paciente;
-
     // El top baja al siguiente nodo
     top = top->siguiente;
 
     // Borramos el nodo de la pila (pero no el paciente)
     delete aux;
-
-    return p;
+    
+    return true;
 }
 
 bool Stack::estaVacia()
@@ -59,8 +57,8 @@ void Stack::mostrar()
     NodoHistorial *aux = top;
     while (aux != nullptr)
     {
-        Paciente *p = aux->paciente;
-        cout << "Nombre: " << p->getNombre() << ", Edad: " << p->getEdad() << ", Servicio: " << p->getServicio() << endl;
+        
+        cout << "Nombre: " << aux->nombre << ", Edad: " << aux->edad << ", Servicio: " << aux->servicio << endl;
         aux = aux->siguiente;
     }
     cout << "--" << endl;
