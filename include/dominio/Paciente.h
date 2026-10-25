@@ -17,10 +17,7 @@ private:
     int diasHospitalizacion;
 
 public:
-    
-    Paciente(int id, string nombre, int edad, string servicio); // constructor del taller 1 (lo dejo para que main siga compilando)
-    
-    Paciente(int id, string nombre, int edad, double temperatura, // constructor nuevo
+        Paciente(int id, string nombre, int edad, double temperatura, // constructor nuevo
              int presionArterial, int dolor, string tipoDolor, int trauma,
              int sintomasNeurologicos, int requiereCirugia,
              int diasHospitalizacion);

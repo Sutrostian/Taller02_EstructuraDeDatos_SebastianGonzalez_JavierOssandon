@@ -301,11 +301,11 @@ void AVL::mostrarNombres(NodoAVL *nodo, bool &primero)
         return;
     mostrarNombres(nodo->izq, primero);
     if (!primero)
-    cout << ", ";
-    cout << nodo->paciente->getNombre() 
-    << " (" 
-    << nodo->paciente->getId() 
-    << ")";
+        cout << ", ";
+    cout << nodo->paciente->getNombre()
+         << " ("
+         << nodo->paciente->getId()
+         << ")";
     primero = false;
     mostrarNombres(nodo->der, primero);
 }

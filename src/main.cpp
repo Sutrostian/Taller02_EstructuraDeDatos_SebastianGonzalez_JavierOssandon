@@ -3,12 +3,11 @@
 #include <cstring>
 #include <cstdlib>
 #include "logica/Queue.h"
-#include "logica/ListaServicios.h"
 #include "logica/Hospital.h"
 #include "logica/Stack.h"
 #include "dominio/Paciente.h"
 #include "logica/ArbolDecision.h"
-#include <iomanip>// para mostrar temperaturas con 1 decimal
+#include <iomanip> // para mostrar temperaturas con 1 decimal
 using namespace std;
 
 // Valida que un string represente un numero entero positivo (solo digitos, sin signo)
@@ -80,7 +79,7 @@ bool esTipoDolorValido(const string &tipo)
     return false;
 }
 
-int leerEntero(const char *mensaje)// Lee un entero validando la entrada; si no es numero, vuelve a pedirlo
+int leerEntero(const char *mensaje) // Lee un entero validando la entrada; si no es numero, vuelve a pedirlo
 {
     int valor;
     while (true)
@@ -302,17 +301,17 @@ int main()
                     p->setServicio(servicioAsignado); // guardo el servicio que asignado por el arbol
 
                     cout << "ID: " << p->getId() << ", Nombre: " << p->getNombre() << ", Edad: " << p->getEdad()
-                    << ", Temperatura: " << fixed << setprecision(1) << p->getTemperatura() << ", Presion: " << p->getPresionArterial()
+                         << ", Temperatura: " << fixed << setprecision(1) << p->getTemperatura() << ", Presion: " << p->getPresionArterial()
                          << ", Dolor: " << p->getDolor() << ", TipoDolor: " << p->getTipoDolor()
                          << ", Trauma: " << p->getTrauma() << ", SintomasNeuro: " << p->getSintomasNeurologicos()
                          << ", RequiereCirugia: " << p->getRequiereCirugia() << ", DiasHospitalizacion: " << p->getDiasHospitalizacion()
-                         << "\nRuta: "<< ruta << "\nServicio asignado: " << servicioAsignado << endl;
+                         << "\nRuta: " << ruta << "\nServicio asignado: " << servicioAsignado << endl;
 
                     if (hospital->agregarPaciente(p->getServicio(), p))
                     {
                         historial->apilar(p);
                         cout << "Paciente insertado en el AVL de " << p->getServicio() << ".\n"
-                        << endl;
+                             << endl;
                     }
                     else
                     {
@@ -332,28 +331,28 @@ int main()
             {
                 int idx = opcDepto - 1;
                 int sub;
-            do
-            {
-                cout << "\n--- " << hospital->getNombreServicio(idx) << " ---" << endl;
-                cout << "1. Recorrido inorden" << endl;
-                cout << "2. Recorrido preorden" << endl;
-                cout << "3. Recorrido postorden" << endl;
-                cout << "4. Mostrar altura" << endl;
-                cout << "5. Mostrar factor de balance" << endl;
-                cout << "0. Volver" << endl;
-                sub = leerEntero("Opcion: ");
-                cout << endl;
+                do
+                {
+                    cout << "\n--- " << hospital->getNombreServicio(idx) << " ---" << endl;
+                    cout << "1. Recorrido inorden" << endl;
+                    cout << "2. Recorrido preorden" << endl;
+                    cout << "3. Recorrido postorden" << endl;
+                    cout << "4. Mostrar altura" << endl;
+                    cout << "5. Mostrar factor de balance" << endl;
+                    cout << "0. Volver" << endl;
+                    sub = leerEntero("Opcion: ");
+                    cout << endl;
 
-                if (sub >= 1 && sub <= 3)
-                    hospital->mostrarRecorrido(idx, sub);
-                else if (sub == 4)
-                    hospital->mostrarAltura(idx);
-                else if (sub == 5)
-                    hospital->mostrarBalance(idx);
-            } while (sub != 0);
+                    if (sub >= 1 && sub <= 3)
+                        hospital->mostrarRecorrido(idx, sub);
+                    else if (sub == 4)
+                        hospital->mostrarAltura(idx);
+                    else if (sub == 5)
+                        hospital->mostrarBalance(idx);
+                } while (sub != 0);
             }
             cout << endl;
-        break;
+            break;
         }
         case 3:
         {

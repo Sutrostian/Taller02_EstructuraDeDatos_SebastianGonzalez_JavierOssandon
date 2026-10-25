@@ -33,7 +33,7 @@ bool Stack::desapilar()
 
     // Borramos el nodo de la pila (pero no el paciente)
     delete aux;
-    
+
     return true;
 }
 
@@ -57,7 +57,7 @@ void Stack::mostrar()
     NodoHistorial *aux = top;
     while (aux != nullptr)
     {
-        
+
         cout << "Nombre: " << aux->nombre << ", Edad: " << aux->edad << ", Servicio: " << aux->servicio << endl;
         aux = aux->siguiente;
     }
