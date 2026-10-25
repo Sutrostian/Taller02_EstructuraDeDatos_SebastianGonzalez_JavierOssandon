@@ -10,7 +10,7 @@ private:
 public:
     Stack();
     void apilar(Paciente *p);
-    Paciente *desapilar();
+    bool desapilar();
     bool estaVacia();
     void mostrar();
     ~Stack();

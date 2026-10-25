@@ -12,7 +12,10 @@ void Stack::apilar(Paciente *p)
 {
 
     NodoHistorial *nuevo = new NodoHistorial();
-    nuevo->paciente = p;
+    nuevo->id = p->getId();
+    nuevo->nombre = p->getNombre();
+    nuevo->edad = p->getEdad();
+    nuevo->servicio = p->getServicio();
     nuevo->siguiente = top; // el nuevo nodo apunta al top actual
     top = nuevo;            // el top pasa a ser el nuevo nodo
 }

@@ -1,9 +1,13 @@
 #pragma once
-#include "dominio/Paciente.h"
+#include <string>
+using namespace std;
 
 class NodoHistorial
 {
 public:
-    Paciente *paciente;
+    int id;
+    string nombre;
+    int edad;
+    string servicio;
     NodoHistorial *siguiente;
 };
