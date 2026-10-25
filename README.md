@@ -53,18 +53,20 @@ Al ejecutar el programa se carga el archivo de pacientes y se muestra el menú p
 3. Revisar historial de atencion
 4. Buscar paciente por ID o nombre
 5. Ver arbol de decision
-6. Salir
+6. Eliminar paciente por ID
+7. Salir
 Seleccionar opcion:
 ```
 
 - **Atender pacientes**: muestra la cola de espera y permite indicar cuántos atender. Cada paciente se saca de la cola, se evalúa con el árbol de decisión (se muestra la ruta seguida), se le asigna el servicio, se inserta en el AVL de ese servicio y se registra en el historial.
-- **Ver departamento**: muestra la cantidad de pacientes por servicio y permite elegir uno para abrir su submenú, con las opciones: recorrido inorden, preorden y postorden, altura del AVL y factor de balance de cada nodo.
+- **Ver departamento**: muestra los ocho servicios con su cantidad de pacientes y los nombres de quienes están en cada uno. Luego permite elegir un servicio para abrir su submenú, con las opciones: recorrido inorden, preorden y postorden, altura del AVL y factor de balance de cada nodo.
 - **Revisar historial de atención**: muestra el registro de atenciones, de la más reciente a la más antigua.
 - **Buscar paciente por ID o nombre**: si lo ingresado es numérico se busca por ID; si no, por nombre. Busca primero en la cola de espera y luego en los AVL de los servicios. Si el paciente ya fue atendido, muestra su departamento, sus datos clínicos y la ruta de búsqueda dentro del AVL.
 - **Ver árbol de decisión**: muestra los recorridos preorden, inorden y postorden del árbol.
+- **Eliminar paciente por ID**: busca al paciente en los AVL de los servicios, lo elimina manteniendo el árbol balanceado y libera su memoria. Solo elimina pacientes ya atendidos; si el paciente sigue en la cola de espera o no existe, se informa. El historial de atenciones se conserva como registro, porque guarda una copia de los datos del paciente.
 - **Salir**: termina la ejecución liberando la memoria dinámica.
 
-- Las opciones numéricas del menú están validadas: si se ingresa un texto en vez de un número, el programa avisa y vuelve a pedir el dato.
+Las opciones numéricas del menú están validadas: si se ingresa un texto en vez de un número, el programa avisa y vuelve a pedir el dato.
 
 ## Formato del archivo de entrada
 Un paciente por línea, con los campos separados por `;`:
@@ -127,26 +129,24 @@ Atributos utilizados (9): Temperatura, Dolor, PresionArterial, Edad, Trauma, Sin
 - Si ninguna condición de especialidad se cumple, el paciente va a Medicina General.
 
 ## Árbol AVL
-Cada servicio tiene su propio AVL, con el **ID del paciente como clave de ordenamiento**.
+Cada servicio tiene su propio AVL, con el ID del paciente como clave de ordenamiento.
 
 - Altura de un puntero nulo: 0; altura de una hoja: 1.
 - Factor de balance = altura(izquierdo) − altura(derecho). El árbol está balanceado cuando va de −1 a 1.
 - Rotaciones: simple izquierda, simple derecha, doble izquierda-derecha y doble derecha-izquierda.
-- Operaciones: insertar (rechaza IDs duplicados), buscar por ID (con la ruta recorrida), buscar por nombre, eliminar, recorridos inorden/preorden/postorden, altura y factor de balance.
+- Operaciones: insertar (rechaza IDs duplicados), buscar por ID (con la ruta recorrida), buscar por nombre, eliminar por ID (con rebalanceo), recorridos inorden/preorden/postorden, altura y factor de balance. Cada vez que una inserción o eliminación requiere rotar, el programa lo informa por pantalla.
 
 ## Estructura del proyecto
 ```
 ├── include/
 │   ├── dominio/     → Persona.h, Paciente.h
 │   └── logica/      → NodoQueue.h, Queue.h, NodoHistorial.h, Stack.h,
-│                       NodoPacienteServicio.h, NodoServicio.h, ListaServicios.h,
 │                       NodoDecision.h, ArbolDecision.h, NodoAVL.h, AVL.h, Hospital.h
 ├── src/
 │   ├── dominio/     → Persona.cpp, Paciente.cpp
-│   ├── logica/      → Queue.cpp, Stack.cpp, ListaServicios.cpp,
-│   │                   ArbolDecision.cpp, AVL.cpp, Hospital.cpp
+│   ├── logica/      → Queue.cpp, Stack.cpp, ArbolDecision.cpp, AVL.cpp, Hospital.cpp
 │   └── main.cpp     → carga del archivo, menú principal
-├── data/            → pacientes_prueba_t2.txt (formato del Taller 2) y archivos del Taller 1
+├── data/            → pacientes_prueba_t2.txt (casos de prueba del Taller 2)
 ├── .gitignore
 └── README.md
 ```
@@ -165,9 +165,12 @@ Cada servicio tiene su propio AVL, con el **ID del paciente como clave de ordena
 - [x] Un AVL por servicio integrado al flujo de atención
 - [x] Menú con recorridos, altura y factor de balance por servicio
 - [x] Búsqueda por ID o nombre con ruta de búsqueda en el AVL
-- [ ] Liberación de memoria
+- [x] Eliminación de pacientes por ID desde el menú
+- [x] Liberación de memoria (destructores en Queue, Stack, ArbolDecision, AVL y Hospital)
 
 ## Casos de prueba (`data/pacientes_prueba_t2.txt`)
+
+### Clasificación (un caso por servicio)
 
 | ID | Caso | Servicio esperado |
 |---|---|---|
@@ -177,8 +180,34 @@ Cada servicio tiene su propio AVL, con el **ID del paciente como clave de ordena
 | 004 | Trauma sin cirugía | Traumatologia |
 | 005 | Síntomas neurológicos | Neurologia |
 | 006 | Dolor de pecho | Cardiologia |
-| 007 | Fiebre de 39.2 (bajo el umbral de 39.5) | Medicina General |
+| 007 | Temperatura 39.8 (sobre el umbral de 39.5) | Urgencias |
 | 008 | 4 días de hospitalización | Hospitalizacion |
+
+### Rotaciones del AVL
+Los pacientes 030 a 060 y 020/017 (ya clasificados por el árbol) fuerzan las cuatro rotaciones. Al atender a todos los pacientes se muestran los mensajes de rotación:
+
+| Servicio | IDs insertados (en orden) | Rotación | Nodo |
+|---|---|---|---|
+| Neurologia | 005, 030, 040 | Simple izquierda | 5 |
+| Neurologia | 035, 033 (con 040 en el árbol) | Simple derecha | 40 |
+| Traumatologia | 004, 050, 060 | Simple izquierda | 4 |
+| Traumatologia | 055, 057 (con 060 en el árbol) | Doble izquierda-derecha | 60 |
+| Cardiologia | 006, 020, 017 | Doble derecha-izquierda | 6 |
+
+### Datos inválidos (se descartan al cargar, con aviso)
+
+| Línea | Problema |
+|---|---|
+| ID 003 repetido | Paciente duplicado |
+| ID 009 | Faltan campos |
+| ID 010 | Temperatura no numérica (`3x.5`) |
+| ID 011 | Dolor fuera de rango (15) |
+| ID 012 | TipoDolor desconocido (`espalda`) |
+| ID 013 | Trauma distinto de 0/1 |
+| (sin ID) | ID vacío |
+| ID 014 | Nombre vacío |
+
+También se controla un archivo inexistente: se informa el error y el programa continúa con la cola vacía.
 
 ## Servicios disponibles
 Urgencias, Medicina General, Cardiología, Neurología, Traumatología, Cirugía, Pediatría, Hospitalización
